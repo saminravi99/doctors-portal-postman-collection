@@ -1,0 +1,1270 @@
+{
+	"info": {
+		"_postman_id": "16a178ac-4b52-4e72-b905-2f6caeea288e",
+		"name": "Doctors Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28720851"
+	},
+	"item": [
+		{
+			"name": "Doctors",
+			"item": [
+				{
+					"name": "Create Doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"fullName\": \"Dr. Mezba\",\n            \"email\": \"ab@cd.com\",\n            \"phoneNumber\": \"90124242345678\",\n            \"role\": \"doctor\",\n            \"qualification\": \"MBBS\",\n            \"specializationId\": \"0963f1a4-b7bf-4963-9496-7355e48fe82a\",\n            \"password\": \"123\",\n            \"isPasswordReset\": false\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/doctors/create-doctor",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"doctors",
+								"create-doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/doctors",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"doctors"
+							],
+							"query": [
+								{
+									"key": "specialization",
+									"value": "Cardiology",
+									"disabled": true
+								},
+								{
+									"key": "qualification",
+									"value": "mbbs",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "fullName",
+									"disabled": true
+								},
+								{
+									"key": "sortOrder",
+									"value": "asc",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "searchTerm",
+									"value": "Cardiology",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/doctors/2443fd5e-22a3-490b-a51e-82e75d8cb347",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"doctors",
+								"2443fd5e-22a3-490b-a51e-82e75d8cb347"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Doctor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"qualification\": \"MBBS\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/doctors/2443fd5e-22a3-490b-a51e-82e75d8cb347",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"doctors",
+								"2443fd5e-22a3-490b-a51e-82e75d8cb347"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Doctor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/doctors/2443fd5e-22a3-490b-a51e-82e75d8cb347",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"doctors",
+								"2443fd5e-22a3-490b-a51e-82e75d8cb347"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Specializations",
+			"item": [
+				{
+					"name": "Create Specialization",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Urology\",\n    \"description\": \"Focusing on urinary tract and male reproductive system problems.\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/specializations/create-specialization",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"specializations",
+								"create-specialization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Specialization",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/specializations",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"specializations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Specialization",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/specializations/41ac66f8-581b-4920-ac0e-322df6ae48ad",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"specializations",
+								"41ac66f8-581b-4920-ac0e-322df6ae48ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sepcialization",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Specializing in heart related issues.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/specializations/41ac66f8-581b-4920-ac0e-322df6ae48ad",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"specializations",
+								"41ac66f8-581b-4920-ac0e-322df6ae48ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Specialization",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/specializations/41ac66f8-581b-4920-ac0e-322df6ae48ad",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"specializations",
+								"41ac66f8-581b-4920-ac0e-322df6ae48ad"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admins",
+			"item": [
+				{
+					"name": "Create Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"John Doe\",\n  \"email\": \"johndoe@example.com\",\n  \"phoneNumber\": \"1234567890\",\n  \"password\": \"admin1234\",\n  \"role\": \"admin\",\n  \"isPasswordReset\": false\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/admins/create-admin",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"admins",
+								"create-admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Admins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/admins",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/admins/a276d691-0ca0-43c0-9d02-a392d1e3e979",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"admins",
+								"a276d691-0ca0-43c0-9d02-a392d1e3e979"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Admin",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fullName\": \"Jon Doe\",\n  \"phoneNumber\": \"1234567890\",\n  \"password\": \"newpassword\",\n  \"isPasswordReset\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/admins/a276d691-0ca0-43c0-9d02-a392d1e3e979",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"admins",
+								"a276d691-0ca0-43c0-9d02-a392d1e3e979"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/admins/a276d691-0ca0-43c0-9d02-a392d1e3e979",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"admins",
+								"a276d691-0ca0-43c0-9d02-a392d1e3e979"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointments",
+			"item": [
+				{
+					"name": "Book Appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"patientId\": \"a4d72f62-4c37-44c6-873d-dbc95d5554b8\",\n  \"availableServiceId\": \"85c491e4-d91d-40b7-87a9-e83e09c3a95c\",\n  \"appointmentDate\": \"2023-10-15T08:00:00.000Z\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/appointments/book-appointment",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"appointments",
+								"book-appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Appointment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/appointments/cancel-appointment/58a089b3-4dc1-4eb6-bc49-960772a7c677",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"appointments",
+								"cancel-appointment",
+								"58a089b3-4dc1-4eb6-bc49-960772a7c677"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Appointment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/appointments/start-appointment/705b0b8c-61c8-4e6e-a6eb-085fbd9a72ce",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"appointments",
+								"start-appointment",
+								"705b0b8c-61c8-4e6e-a6eb-085fbd9a72ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finish Appointment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/appointments/finish-appointment/705b0b8c-61c8-4e6e-a6eb-085fbd9a72ce",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"appointments",
+								"finish-appointment",
+								"705b0b8c-61c8-4e6e-a6eb-085fbd9a72ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/appointments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/appointments/d167b22b-4fca-41cf-94b8-c01834e1825c",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"appointments",
+								"d167b22b-4fca-41cf-94b8-c01834e1825c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Appointment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"appointmentDate\": \"2023-10-01T14:30:00.000Z\",\n    \"status\": \"started\",\n    \"patientId\": \"4652e333-75c7-4b3c-b4c5-94c2d1df79e8\",\n    \"availableServiceId\": \"4652e333-75c7-4b3c-b4c5-94c2d1df79e8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/appointments/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"appointments",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AvailableDoctors",
+			"item": [
+				{
+					"name": "Create Available Doctors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"availableDate\": \"2023-10-15T08:00:00.000Z\",\n    \"doctorId\": \"68af64a0-6ae7-41fe-abf9-b8a761cea4ef\",\n    \"slotId\": \"8a3e204d-2295-4afb-a288-7a9af73d7a97\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/available-doctors/create-available-doctor",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-doctors",
+								"create-available-doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Available Doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/available-doctors",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-doctors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Available Doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/available-doctors/173fec59-2450-43d1-9cf8-fdcba1f0838a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-doctors",
+								"173fec59-2450-43d1-9cf8-fdcba1f0838a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Available Doctor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"availableDate\": \"2023-10-15T08:00:00.000Z\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/available-doctors/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-doctors",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Available Doctor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/available-doctors/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-doctors",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AvailableServices",
+			"item": [
+				{
+					"name": "Create Available Service",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"slotDate\": \"2023-10-15T08:00:00.000Z\",\n  \"availableSeats\": 10,\n  \"isBooked\": false,\n  \"serviceId\": \"590dd496-8b3a-45bf-9643-bcffa017b49b\",\n  \"slotId\": \"8a3e204d-2295-4afb-a288-7a9af73d7a97\",\n  \"availableDoctorId\": \"173fec59-2450-43d1-9cf8-fdcba1f0838a\",\n  \"fees\" : \"100\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/available-services/create-available-service",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-services",
+								"create-available-service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Available Services",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"slotDate\" : \"12-05-2017\",\n    \"availableSeats\" : 10,\n    \"fees\" : \"100\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/available-services/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-services",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Available Service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/available-services/85c491e4-d91d-40b7-87a9-e83e09c3a95c",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-services",
+								"85c491e4-d91d-40b7-87a9-e83e09c3a95c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Available Service",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"availableDate\": \"2023-10-15T08:00:00.000Z\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/available-services/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-services",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Available Service",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/available-services/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"available-services",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MedicalProfiles",
+			"item": [
+				{
+					"name": "Get All Medical Profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/medical-profiles",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"medical-profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Medical Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/medical-profiles/cf6cf62d-cc1f-41c0-8ec2-dd09d165a3ea",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"medical-profiles",
+								"cf6cf62d-cc1f-41c0-8ec2-dd09d165a3ea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Medical Profile",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dob\": \"1995-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/medical-profiles/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"medical-profiles",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"John Doe 1\",\n    \"email\": \"johndoe2@example.com\",\n    \"phoneNumber\": \"12345367890\",\n    \"password\": \"patient12344\",\n    \"role\": \"patient\",\n    \"medicalProfile\": {\n        \"address\": \"123 Main Street\",\n        \"dob\": \"1990-01-01\",\n        \"gender\": \"Male\",\n        \"emergencyContact\": \"023187032213\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/patients/create-patient",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"patients",
+								"create-patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/patients/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"patients",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/patients/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"patients",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"John Doe 12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/patients/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"patients",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/patients/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"patients",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Get All Payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/payments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/payments/da8cbf27-c12b-4bfa-88be-a2265bcfc199",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"payments",
+								"da8cbf27-c12b-4bfa-88be-a2265bcfc199"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Payment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": \"50.00\",\n    \"paymentStatus\": \"paid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/payments/4652e333-75c7-4b3c-b4c5-94c2d1df79e8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"payments",
+								"4652e333-75c7-4b3c-b4c5-94c2d1df79e8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "Create Service",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Bypass Surgery\",\n  \"description\": \"Service Description\",\n  \"specializationId\": \"6d845ec8-a72e-4845-b8aa-465bd71063ab\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/services/create-service",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"services",
+								"create-service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/services",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/services/03f5a88e-ab09-4032-98ee-890955dd8654",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"services",
+								"03f5a88e-ab09-4032-98ee-890955dd8654"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Bypass Surgery Pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/services/03f5a88e-ab09-4032-98ee-890955dd8654",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"services",
+								"03f5a88e-ab09-4032-98ee-890955dd8654"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Service",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/services/03f5a88e-ab09-4032-98ee-890955dd8654",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"services",
+								"03f5a88e-ab09-4032-98ee-890955dd8654"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TimeSlots",
+			"item": [
+				{
+					"name": "Create Time Slot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"startTime\": \"11:00 AM\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/time-slots/create-time-slot",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"time-slots",
+								"create-time-slot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Time Slots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/time-slots/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"time-slots",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Time Slot",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/time-slots/fd3178fd-5e53-467f-850e-a139f9d27cd0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"time-slots",
+								"fd3178fd-5e53-467f-850e-a139f9d27cd0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Time Slot",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"startTime\": \"11:30 PM\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/time-slots/fd3178fd-5e53-467f-850e-a139f9d27cd0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"time-slots",
+								"fd3178fd-5e53-467f-850e-a139f9d27cd0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Time Slot",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/time-slots/fd3178fd-5e53-467f-850e-a139f9d27cd0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"time-slots",
+								"fd3178fd-5e53-467f-850e-a139f9d27cd0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://doctors-portal-prisma-postgres.vercel.app/api/v1",
+			"type": "string"
+		}
+	]
+}
